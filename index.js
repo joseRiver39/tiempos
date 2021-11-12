@@ -1,12 +1,20 @@
-let horaEntrada= new Date("2021/11/11 18:00")
-let horaSalida=new Date(" ");
-let calacularTiempo=(horaSalida.getTime()-horaEntrada.getTime())/60000
-let tarifaMoto=50
-let tarifaCarro=70
-let valorpagar=calacularTiempo*tarifaMoto
-let valorpagar2=calacularTiempo*tarifaCarro
-console.log(horaEntrada)
-console.log(calacularTiempo)
-console.log(valorpagar)
-console.log(valorpagar2)
+let horaEntrada= new Date(" 2021-11-11 19:00")
+let horaSalida=new Date("2021-11-11 19:50");
 
+let tarifaMoto=50.00
+let tarifaCarro=70.00
+let typo =""
+
+
+function CalcularV (horaSalida,horaEntrada,tarifaCarro,tarifaMoto,typo){ 
+  
+  if(typo ==="carro"){
+  return((horaSalida.getTime()-horaEntrada.getTime())/60000)*tarifaCarro
+}else{
+return((horaSalida.getTime()-horaEntrada.getTime())/60000)*tarifaMoto
+}
+
+}
+let calacularpago= CalcularV(horaSalida,horaEntrada,tarifaCarro,tarifaMoto,typo)
+
+console.log(calacularpago)
